@@ -180,7 +180,7 @@ if (answer == "$"):
         menu.add_cascade(label = "Edit", menu = edit)
     
     def showTxt(self):
-        text = Label(self, text = "5GNS-TYVD-UHCM-XG6U-3UT3-VMBQ")
+        text = Label(self, text = "XXXX-XXXX-XXXX-XXXX-XXXX-XXXX")
         text.pack()
     
     def client_exit(self):
