@@ -81,9 +81,9 @@ print("Before we start, what is your number?")
 int_num = input("Remember +XX in front of the number: ")
 
 # twilio Cloud service etc.
-client = Client("AC136ebf4a0dc4a917ff1fa0b3ed8895d4", "fbd57c3387c3692c3dc556dcff427c3e")
+client = Client("", "") #client id
 client.messages.create(to=int_num, 
-                       from_="+3197010253003", 
+                       from_="", # number
                        body="Your encryped code is - %d" % rand_num)
 
 # Welcoming user categorized by ip_address
@@ -96,6 +96,7 @@ print("............................................")
 # verifying that given key is correct and granting access
 encrypkey = input("Key: ")
 
+# opens generated code and verifies content with given code
 f = open("gen_code.txt", "r")
 if f.mode == 'r':
     contents = f.read()
@@ -141,6 +142,7 @@ myList = [
     'Access granted, end of intermission',
 ]
 
+# prints simulated loading bar
 for i in tqdm(myList):
     time.sleep(0.2)
     print(i)
